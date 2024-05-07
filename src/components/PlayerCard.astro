@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+    image: ImageMetadata;
+    playerName: string;
+    playerValue: string;
+    playerHeight: string;
+    playerPrice: string;
+}
+
+const { image, playerName, playerValue, playerHeight, playerPrice } =
+    Astro.props;
+---
+
+<div>
+    <Image src={image} alt="player" loading="eager" />
+
+    <div class="flex">
+        <div>
+            <div>name</div>
+            <div>market value</div>
+            <div>min price</div>
+            <div>height</div>
+        </div>
+        <div>
+            <div>{playerName}</div>
+            <div>{playerValue}</div>
+            <div>{playerPrice}</div>
+            <div>{playerHeight}</div>
+        </div>
+    </div>
+</div>
