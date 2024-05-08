@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import tientoLogo from "../images/tiento-logo.svg";
+
+import discordLogo from "../images/discord-logo.svg";
+import twitterLogo from "../images/twitter-logo.svg";
+import instagramLogo from "../images/instagram-logo.svg";
+---
+
+<footer
+    class="mx-auto w-full py-10 px-2 max-w-screen-xl flex flex-col justify-center items-center"
+>
+    <div class="flex justify-between w-full mb-20">
+        <div class="flex flex-col justify-start items-start">
+            <div class="flex justify-center items-center mb-5">
+                <Image src={tientoLogo} height={75} width={75} alt="logo" />
+                <div class="head-title">TIENTO</div>
+            </div>
+            <div class="max-w-40">
+                <p>Helping players to grow in their carrers</p>
+            </div>
+        </div>
+        <div class="flex gap-x-10">
+            <div>
+                <ul class="flex flex-col gap-y-1">
+                    <li class="mb-5 font-bold">Company</li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/carrers">Carrers</a></li>
+                    <li>
+                        <a href="/terms-of-service">Terms of Service</a>
+                    </li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="flex flex-col gap-y-1">
+                    <li class="mb-5 font-bold">Resources</li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/community">Community</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="border-b-2 border-white w-full mb-5"></div>
+    <div class="flex justify-between items-center w-full">
+        <div>© Copyright Tiento 2024. All Rights Reserved</div>
+        <div class="flex gap-x-5">
+            <div class="social-icon">
+                <Image src={discordLogo} alt="discord-icon" />
+            </div>
+            <div class="social-icon">
+                <Image src={twitterLogo} alt="twitter-icon" />
+            </div>
+            <div class="social-icon">
+                <Image src={instagramLogo} alt="instagram-icon" />
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .head-title {
+        font-family: "Fugaz One";
+    }
+
+    .social-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        border: 0.5px solid white;
+        border-radius: 100%;
+        background: rgba(200, 200, 200, 0.2);
+    }
+</style>
