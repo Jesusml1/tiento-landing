@@ -17,67 +17,65 @@ import partner1 from "../images/partner-1.png";
 import partner2 from "../images/partner-2.png";
 import partner3 from "../images/partner-3.png";
 
-import discordLogo from "../images/discord-logo.svg";
-import twitterLogo from "../images/twitter-logo.svg";
-import instagramLogo from "../images/instagram-logo.svg";
+import starterBtn from "../images/starter-btn.svg";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<header>
-		<div class="flex justify-between">
-			<div class="flex gap-4">
-				<img src={tientoLogo.src} height={200} width={200} alt="logo" />
-				<div class="head-title">TIENTO</div>
-			</div>
-			<div>
-				<ul class="flex gap-4">
-					<li>
-						<a href="#about">About</a>
-					</li>
-					<li>
-						<a href="#mission">Mission</a>
-					</li>
-					<li>
-						<a href="#vision">Vision</a>
-					</li>
-					<li>
-						<a href="#roadmap">Roadmap</a>
-					</li>
-				</ul>
-			</div>
-			<div>GET STARTED</div>
-		</div>
-	</header>
-	<main>
-		<section>
-			<div>
-				<div>
-					<h1>
+<Layout title="Tiento">
+	<Navbar />
+	<main
+		class="mx-auto w-full py-10 px-2 max-w-screen-xl flex flex-col justify-center items-center"
+	>
+		<section class="relative w-full mb-10">
+			<!-- <div class="square-grid"></div> -->
+			<div class="z-100 flex justify-between relative">
+				<div class="w-full">
+					<h1
+						class="text-5xl max-w-lg mb-14 leading-[3.5rem] font-bold"
+					>
 						Discover, Collect and Sell Exclusive Digital Art of NFTs
 					</h1>
-					<h4>
+					<h4 class="max-w-lg mb-14">
 						Explore the captivating world of NFTs, where each token
 						represents a unique digital asset, and trust in verified
 						ownership as you collect these one-of-a-kind treasures.
 					</h4>
-					<div>GET STARTED</div>
+					<div class="mb-14">
+						<Image src={starterBtn} alt="btn" />
+					</div>
 				</div>
-				<div>
+				<div class="relative max-w-md w-full h-auto">
 					<Image src={playerHero} alt="hero-player" loading="eager" />
+					<div class="hero-image-card">
+						<div>
+							<div class="font-bold">market value</div>
+							<div>min value</div>
+						</div>
+						<div class="text-right">
+							<div class="font-bold">$5000</div>
+							<div>$3</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<section id="about">
-			<div>ABOUT</div>
-			<p>
+		<section
+			id="about"
+			class="p-20 mb-10 flex flex-col justify-center items-center gap-y-10 bg-[#1f1f1f5d]"
+		>
+			<div class="border-2 border-white border-solid w-fit px-20 py-5">
+				ABOUT
+			</div>
+			<p class="text-2xl">
 				Tiento is an organization that wants to build a community that
 				unites all who feel genuine passion for football through the
 				combination of  digital collectibles/currency built on 
 				blockchain technologies, and formation/representation rights of
 				professional football players.
 			</p>
-			<div class="flex">
+			<div class="flex gap-x-10">
 				<PlayerCard
 					image={playerAbout1}
 					playerName="Alvaro Perez"
@@ -101,10 +99,17 @@ import instagramLogo from "../images/instagram-logo.svg";
 				/>
 			</div>
 		</section>
-		<section>
-			<div class="flex">
-				<div id="mission">
-					<div>MISSION</div>
+		<section class="mb-10">
+			<div class="flex gap-x-4">
+				<div
+					id="mission"
+					class="p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
+				>
+					<div
+						class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+					>
+						MISSION
+					</div>
 					<p>
 						Use blockchain technology to close the existing gap
 						between professional football players and fans. This
@@ -112,6 +117,7 @@ import instagramLogo from "../images/instagram-logo.svg";
 						public to invest in the development of players and also
 						have a share in their professional representation.
 					</p>
+					<br />
 					<p>
 						The blockchain will validate financial transactions,
 						players representation rights ownership through Tiento
@@ -119,8 +125,15 @@ import instagramLogo from "../images/instagram-logo.svg";
 						projections if players increase their market value.
 					</p>
 				</div>
-				<div id="vision">
-					<div>VISION</div>
+				<div
+					id="vision"
+					class="p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
+				>
+					<div
+						class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+					>
+						VISION
+					</div>
 					<p>
 						Currently, Tiento Sports Agency has a total of 5
 						professional players. The short term vision is to be
@@ -128,6 +141,7 @@ import instagramLogo from "../images/instagram-logo.svg";
 						provide an investment opportunity using formation and
 						representation rights.
 					</p>
+					<br />
 					<p>
 						The long term vision is to expand the quantity of
 						players for representation and also hold deals with
@@ -138,8 +152,15 @@ import instagramLogo from "../images/instagram-logo.svg";
 				</div>
 			</div>
 		</section>
-		<section id="roadmap">
-			<div>ROADMAP</div>
+		<section
+			id="roadmap"
+			class="mb-10 py-10 bg-[#1f1f1f5d] w-full flex flex-col justify-center items-center"
+		>
+			<div
+				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+			>
+				ROADMAP
+			</div>
 			<div>
 				<div class="flex">
 					<div>PHASE 1</div>
@@ -173,88 +194,100 @@ import instagramLogo from "../images/instagram-logo.svg";
 				</div>
 			</div>
 		</section>
-		<section>
-			<div>TEAM</div>
-			<div class="flex">
+		<section class="flex flex-col justify-center items-center mb-20">
+			<div
+				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+			>
+				TEAM
+			</div>
+			<div class="flex gap-x-10">
 				<Image src={team1} alt="team-member-1" />
 				<Image src={team2} alt="team-member-2" />
 				<Image src={team3} alt="team-member-3" />
 			</div>
 		</section>
-		<section>
-			<div>PARTNERS</div>
-			<div class="flex">
-				<div>
+		<section class="flex flex-col justify-center items-center mb-20">
+			<div
+				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+			>
+				PARTNERS
+			</div>
+			<div class="flex gap-x-32">
+				<div class="flex flex-col justify-center items-center gap-y-8">
 					<Image src={partner1} alt="partner-1" />
 					<div>DISPLACE</div>
 				</div>
-				<div>
+				<div class="flex flex-col justify-center items-center gap-y-8">
 					<Image src={partner2} alt="partner-2" />
 					<div>THE LOOP</div>
 				</div>
-				<div>
+				<div class="flex flex-col justify-center items-center gap-y-8">
 					<Image src={partner3} alt="partner-3" />
 					<div>SOCCER VEN</div>
 				</div>
 			</div>
 		</section>
-		<section>
-			<div>
-				<div>Start your Tiento journey</div>
+		<section class="join">
+			<div class="join-card">
+				<h2 class="text-3xl">Start your Tiento journey</h2>
 				<div>Join our community</div>
-				<div>GET STARTED</div>
+				<Image src={starterBtn} alt="btn" />
 			</div>
 		</section>
 	</main>
-	<footer>
-		<div class="flex justify-between">
-			<div>
-				<div class="flex">
-					<Image src={tientoLogo} alt="tiento-logo" />
-					<div>TIENTO</div>
-				</div>
-				<div><p>Helping players to grow in their carrers</p></div>
-			</div>
-			<div class="flex">
-				<div>
-					<ul>
-						<li class="mb-5">Company</li>
-						<li><a href="#about">About</a></li>
-						<li><a href="/carrers">Carrers</a></li>
-						<li><a href="/terms-of-service">Terms of Service</a></li>
-						<li><a href="/privacy-policy">Privacy Policy</a></li>
-					</ul>
-				</div>
-				<div>
-					<ul>
-						<li class="mb-5">Resources</li>
-						<li><a href="/blog">Blog</a></li>
-						<li><a href="/contact">Contact</a></li>
-						<li><a href="/community">Community</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div></div>
-		<div class="flex justify-between">
-			<div>© Copyright Tiento 2024. All Rights Reserved</div>
-			<div class="flex">
-				<div>
-					<Image src={discordLogo} alt="discord-icon" />
-				</div>
-				<div>
-					<Image src={twitterLogo} alt="twitter-icon" />
-				</div>
-				<div>
-					<Image src={instagramLogo} alt="instagram-icon" />
-				</div>
-			</div>
-		</div>
-	</footer>
+	<Footer />
 </Layout>
 
 <style>
 	.head-title {
 		font-family: "Fugaz One";
+	}
+
+	.hero-image-card {
+		position: absolute;
+		bottom: 25px;
+		right: 50px;
+		display: flex;
+		column-gap: 20px;
+		border: 1px solid white;
+		padding: 20px;
+		background: rgba(31, 31, 31, 0.5);
+		backdrop-filter: blur(10px);
+	}
+
+	.square-grid {
+		position: absolute;
+		top: 0;
+		z-index: 10;
+		width: 100%;
+		height: 100%;
+		opacity: 0.8;
+		background-image: linear-gradient(#505050 1px, transparent 1px),
+			linear-gradient(to right, #505050 1px, #e5e5f700 1px);
+		background-position: 50% 50%;
+		background-size: 32px 52px;
+	}
+
+	.join {
+		background-image: url("../images/stadium-background.png");
+		width: 100%;
+		padding-top: 200px;
+		padding-bottom: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.join-card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 0.5px solid rgba(255, 255, 255, 0.5);
+		width: 100%;
+		row-gap: 2rem;
+		padding: 100px;
+		margin: 0 100px;
+		background: rgba(31, 31, 31, 0.5);
 	}
 </style>

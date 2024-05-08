@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import tientoLogo from "../images/tiento-logo.svg";
+---
+
+<header
+    class="mx-auto w-full py-10 px-2 max-w-screen-xl flex justify-center items-center"
+>
+    <div class="flex w-full justify-between items-center">
+        <div class="flex gap-4 justify-center items-center">
+            <Image src={tientoLogo} height={100} width={100} alt="logo" />
+            <div class="head-title">TIENTO</div>
+        </div>
+        <div>
+            <ul class="flex gap-4">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#mission">Mission</a>
+                </li>
+                <li>
+                    <a href="#vision">Vision</a>
+                </li>
+                <li>
+                    <a href="#roadmap">Roadmap</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <a href="/login" class="hover:underline"> GET STARTED </a>
+        </div>
+    </div>
+</header>
+
+<style>
+    .head-title {
+        font-family: "Fugaz One";
+    }
+</style>
