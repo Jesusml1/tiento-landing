@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import tientoLogo from "../images/tiento-logo.svg";
 import playerHero from "../images/player-hero.png";
 import PlayerCard from "../components/PlayerCard.astro";
 
@@ -27,10 +26,10 @@ import Footer from "../components/Footer.astro";
 	<main
 		class="mx-auto w-full py-10 px-2 max-w-screen-xl flex flex-col justify-center items-center"
 	>
-		<section class="relative w-full mb-10">
+		<section class="relative w-full min-h-[90vh]">
 			<!-- <div class="square-grid"></div> -->
 			<div class="z-100 flex justify-between relative">
-				<div class="w-full">
+				<div class="hero-left-side w-full">
 					<h1
 						class="text-5xl max-w-lg mb-14 leading-[3.5rem] font-bold"
 					>
@@ -45,7 +44,7 @@ import Footer from "../components/Footer.astro";
 						<Image src={starterBtn} alt="btn" />
 					</div>
 				</div>
-				<div class="relative max-w-md w-full h-auto">
+				<div class="hero-right-side relative max-w-md w-full h-auto">
 					<Image src={playerHero} alt="hero-player" loading="eager" />
 					<div class="hero-image-card">
 						<div>
@@ -63,7 +62,7 @@ import Footer from "../components/Footer.astro";
 
 		<section
 			id="about"
-			class="p-20 mb-10 flex flex-col justify-center items-center gap-y-10 bg-[#1f1f1f5d]"
+			class="about-section p-20 mb-10 flex flex-col justify-center items-center gap-y-10 bg-[#1f1f1f5d]"
 		>
 			<div class="border-2 border-white border-solid w-fit px-20 py-5">
 				ABOUT
@@ -103,7 +102,7 @@ import Footer from "../components/Footer.astro";
 			<div class="flex gap-x-4">
 				<div
 					id="mission"
-					class="p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
+					class="mission-card p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
 				>
 					<div
 						class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
@@ -127,7 +126,7 @@ import Footer from "../components/Footer.astro";
 				</div>
 				<div
 					id="vision"
-					class="p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
+					class="vision-card p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
 				>
 					<div
 						class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
@@ -154,7 +153,7 @@ import Footer from "../components/Footer.astro";
 		</section>
 		<section
 			id="roadmap"
-			class="mb-10 py-10 bg-[#1f1f1f5d] w-full flex flex-col justify-center items-center"
+			class="roadmap-section mb-10 py-10 bg-[#1f1f1f5d] w-full flex flex-col justify-center items-center"
 		>
 			<div
 				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
@@ -194,7 +193,9 @@ import Footer from "../components/Footer.astro";
 				</div>
 			</div>
 		</section>
-		<section class="flex flex-col justify-center items-center mb-20">
+		<section
+			class="team-section flex flex-col justify-center items-center mb-20"
+		>
 			<div
 				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
 			>
@@ -206,7 +207,9 @@ import Footer from "../components/Footer.astro";
 				<Image src={team3} alt="team-member-3" />
 			</div>
 		</section>
-		<section class="flex flex-col justify-center items-center mb-20">
+		<section
+			class="partners-section flex flex-col justify-center items-center mb-20"
+		>
 			<div
 				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
 			>
@@ -237,6 +240,8 @@ import Footer from "../components/Footer.astro";
 	</main>
 	<Footer />
 </Layout>
+
+<script src="../scripts/animations.ts"></script>
 
 <style>
 	.head-title {
