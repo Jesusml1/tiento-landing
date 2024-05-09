@@ -23,37 +23,45 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="Tiento">
 	<Navbar />
-	<main
-		class="mx-auto w-full py-10 px-2 max-w-screen-xl flex flex-col justify-center items-center"
-	>
-		<section class="relative w-full min-h-[90vh]">
-			<!-- <div class="square-grid"></div> -->
-			<div class="z-100 flex justify-between relative">
-				<div class="hero-left-side w-full">
-					<h1
-						class="text-5xl max-w-lg mb-14 leading-[3.5rem] font-bold"
-					>
-						Discover, Collect and Sell Exclusive Digital Art of NFTs
-					</h1>
-					<h4 class="max-w-lg mb-14">
-						Explore the captivating world of NFTs, where each token
-						represents a unique digital asset, and trust in verified
-						ownership as you collect these one-of-a-kind treasures.
-					</h4>
-					<div class="mb-14">
-						<Image src={starterBtn} alt="btn" />
-					</div>
-				</div>
-				<div class="hero-right-side relative max-w-md w-full h-auto">
-					<Image src={playerHero} alt="hero-player" loading="eager" />
-					<div class="hero-image-card">
-						<div>
-							<div class="font-bold">market value</div>
-							<div>min value</div>
+	<main class="flex flex-col justify-center items-center">
+		<section class="hero-section relative w-full min-h-[90vh]">
+			<div class="square-grid"></div>
+			<div class="mx-auto py-10 px-2 max-w-screen-xl relative">
+				<div class="flex justify-between relative">
+					<div class="hero-left-side w-full">
+						<h1
+							class="text-5xl max-w-lg mb-14 leading-[3.5rem] font-bold"
+						>
+							Discover, Collect and Sell Exclusive Digital Art of
+							NFTs
+						</h1>
+						<h4 class="max-w-lg mb-14">
+							Explore the captivating world of NFTs, where each
+							token represents a unique digital asset, and trust
+							in verified ownership as you collect these
+							one-of-a-kind treasures.
+						</h4>
+						<div class="mb-14">
+							<Image src={starterBtn} alt="btn" />
 						</div>
-						<div class="text-right">
-							<div class="font-bold">$5000</div>
-							<div>$3</div>
+					</div>
+					<div
+						class="hero-right-side relative max-w-md w-full h-auto"
+					>
+						<Image
+							src={playerHero}
+							alt="hero-player"
+							loading="eager"
+						/>
+						<div class="hero-image-card">
+							<div>
+								<div class="font-bold">market value</div>
+								<div>min value</div>
+							</div>
+							<div class="text-right">
+								<div class="font-bold">$5000</div>
+								<div>$3</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -263,18 +271,18 @@ import Footer from "../components/Footer.astro";
 	.square-grid {
 		position: absolute;
 		top: 0;
-		z-index: 10;
 		width: 100%;
-		height: 100%;
+		height: 80%;
 		opacity: 0.8;
 		background-image: linear-gradient(#505050 1px, transparent 1px),
 			linear-gradient(to right, #505050 1px, #e5e5f700 1px);
 		background-position: 50% 50%;
-		background-size: 32px 52px;
+		background-size: 62px 82px;
 	}
 
 	.join {
 		background-image: url("../images/stadium-background.png");
+		background-size: cover;
 		width: 100%;
 		padding-top: 200px;
 		padding-bottom: 200px;
