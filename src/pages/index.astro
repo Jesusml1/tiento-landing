@@ -19,6 +19,7 @@ import partner3 from "../images/partner-3.png";
 import starterBtn from "../images/starter-btn.svg";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import Roadmap from "../components/Roadmap.astro";
 ---
 
 <Layout title="Tiento">
@@ -166,48 +167,7 @@ import Footer from "../components/Footer.astro";
 				</div>
 			</div>
 		</section>
-		<section
-			id="roadmap"
-			class="roadmap-section mb-10 py-10 bg-[#1f1f1f5d] w-full flex flex-col justify-center items-center"
-		>
-			<div
-				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
-			>
-				ROADMAP
-			</div>
-			<div>
-				<div class="flex">
-					<div>PHASE 1</div>
-					<div></div>
-					<div>Brand Awareness & Community Incubation</div>
-				</div>
-				<div class="flex">
-					<div>PHASE 2</div>
-					<div></div>
-					<div>Pre-Launching campaign</div>
-				</div>
-				<div class="flex">
-					<div>PHASE 3</div>
-					<div></div>
-					<div>Minting</div>
-				</div>
-				<div class="flex">
-					<div>PHASE 4</div>
-					<div></div>
-					<div>Player Development Program</div>
-				</div>
-				<div class="flex">
-					<div>PHASE 5</div>
-					<div></div>
-					<div>Awareness Platform</div>
-				</div>
-				<div class="flex">
-					<div>PHASE 6</div>
-					<div></div>
-					<div>Holder Utilities</div>
-				</div>
-			</div>
-		</section>
+		<Roadmap />
 		<section
 			class="team-section flex flex-col justify-center items-center mb-20 md:mb-28"
 		>

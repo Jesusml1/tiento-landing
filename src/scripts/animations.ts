@@ -45,8 +45,51 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollTrigger: ".roadmap-section",
         y: 200,
         opacity: 0,
+        duration: 0.5,
+    });
+
+    gsap.from(".roadmap-1", {
+        scrollTrigger: ".roadmap-1",
+        x: 200,
+        opacity: 0,
+        duration: 0.5,
+    });
+
+    gsap.from(".roadmap-2", {
+        scrollTrigger: ".roadmap-2",
+        x: 200,
+        opacity: 0,
         duration: 1,
     });
+
+    gsap.from(".roadmap-3", {
+        scrollTrigger: ".roadmap-3",
+        x: 200,
+        opacity: 0,
+        duration: 0.5,
+    });
+
+    gsap.from(".roadmap-4", {
+        scrollTrigger: ".roadmap-4",
+        x: 200,
+        opacity: 0,
+        duration: 1,
+    });
+
+    gsap.from(".roadmap-5", {
+        scrollTrigger: ".roadmap-5",
+        x: 200,
+        opacity: 0,
+        duration: 0.5,
+    });
+
+    gsap.from(".roadmap-6", {
+        scrollTrigger: ".roadmap-6",
+        x: 200,
+        opacity: 0,
+        duration: 1,
+    });
+
 
     gsap.from(".team-section", {
         scrollTrigger: ".team-section",
