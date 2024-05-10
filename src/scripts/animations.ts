@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
 
     gsap.from("header", {
         opacity: 0,
@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     gsap.from(".hero-left-side", {
-        x: -300,
+        x: -200,
         opacity: 0,
         duration: 1,
     });
     gsap.from(".hero-right-side", {
-        x: 300,
+        x: 200,
         opacity: 0,
         duration: 1,
     });
