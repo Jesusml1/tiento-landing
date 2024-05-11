@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import partner1 from "@images/partner-1.png";
+import partner2 from "@images/partner-2.png";
+import partner3 from "@images/partner-3.png";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+    class="partners-section flex flex-col justify-center items-center mb-20 md:mb-28"
+>
+    <div class="mb-10 border-2 border-white border-solid w-fit px-20 py-5">
+        {t("partners.title")}
+    </div>
+    <div class="flex flex-col gap-y-24 md:flex-row md:gap-x-32">
+        <div class="flex flex-col justify-center items-center gap-y-8">
+            <Image src={partner1} alt="partner-1" loading="eager" />
+            <div>DISPLACE</div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-y-8">
+            <Image src={partner2} alt="partner-2" loading="eager" />
+            <div>THE LOOP</div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-y-8">
+            <Image src={partner3} alt="partner-3" loading="eager" />
+            <div>SOCCER VEN</div>
+        </div>
+    </div>
+</section>

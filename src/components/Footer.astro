@@ -1,10 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import tientoLogo from "../images/tiento-logo.svg";
+import tientoLogo from "@images/tiento-logo.svg";
 
-import discordLogo from "../images/discord-logo.svg";
-import twitterLogo from "../images/twitter-logo.svg";
-import instagramLogo from "../images/instagram-logo.svg";
+import discordLogo from "@images/discord-logo.svg";
+import twitterLogo from "@images/twitter-logo.svg";
+import instagramLogo from "@images/instagram-logo.svg";
+
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer
@@ -16,35 +21,35 @@ import instagramLogo from "../images/instagram-logo.svg";
                 <Image src={tientoLogo} height={75} width={75} alt="logo" />
                 <div class="head-title">TIENTO</div>
             </div>
-            <div class="max-w-40">
-                <p>Helping players to grow in their carrers</p>
+            <div class="max-w-48">
+                <p>{t('footer.motto')}</p>
             </div>
         </div>
         <div class="flex gap-x-10">
             <div>
                 <ul class="flex flex-col gap-y-1">
-                    <li class="mb-5 font-bold">Company</li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="/carrers">Carrers</a></li>
+                    <li class="mb-5 font-bold">{t('footer.company')}</li>
+                    <li><a href="#about">{t('footer.company.about')}</a></li>
+                    <li><a href="/carrers">{t('footer.company.carrers')}</a></li>
                     <li>
-                        <a href="/terms-of-service">Terms of Service</a>
+                        <a href="/terms-of-service">{t('footer.company.termsOfService')}</a>
                     </li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/privacy-policy">{t('footer.company.privacyPolicy')}</a></li>
                 </ul>
             </div>
             <div>
                 <ul class="flex flex-col gap-y-1">
-                    <li class="mb-5 font-bold">Resources</li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/community">Community</a></li>
+                    <li class="mb-5 font-bold">{t('footer.resources')}</li>
+                    <li><a href="/blog">{t('footer.resources.blog')}</a></li>
+                    <li><a href="/contact">{t('footer.resources.contact')}</a></li>
+                    <li><a href="/community">{t('footer.resources.community')}</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="border-b-2 border-white w-full mb-5"></div>
     <div class="flex flex-col-reverse gap-y-8 md:gap-y-0 md:flex-row justify-between items-end md:items-center w-full">
-        <div>© Copyright Tiento 2024. All Rights Reserved</div>
+        <div>{}</div>
         <div class="flex gap-x-5">
             <div class="social-icon">
                 <Image src={discordLogo} alt="discord-icon" />

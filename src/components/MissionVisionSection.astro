@@ -1,0 +1,45 @@
+---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="mb-10 p-5 max-w-screen-2xl">
+    <div class="flex flex-col gap-y-4 md:gap-x-4 md:flex-row">
+        <div
+            id="mission"
+            class="mission-card md:w-1/2 p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
+        >
+            <div
+                class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+            >
+                {t("mission.title")}
+            </div>
+            <p>
+                {t("mission.body1")}
+            </p>
+            <br />
+            <p>
+                {t("mission.body2")}
+            </p>
+        </div>
+        <div
+            id="vision"
+            class="vision-card p-10 md:w-1/2 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
+        >
+            <div
+                class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
+            >
+                {t("vision.title")}
+            </div>
+            <p>
+                {t("vision.body1")}
+            </p>
+            <br />
+            <p>
+                {t("vision.body2")}
+            </p>
+        </div>
+    </div>
+</section>

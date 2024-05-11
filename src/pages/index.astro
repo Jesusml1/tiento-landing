@@ -1,274 +1,34 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import playerHero from "../images/player-hero.png";
-import PlayerCard from "../components/PlayerCard.astro";
-
-import playerAbout1 from "../images/player-about-1.png";
-import playerAbout2 from "../images/player-about-2.png";
-import playerAbout3 from "../images/player-about-3.png";
-
-import team1 from "../images/team-1.png";
-import team2 from "../images/team-2.png";
-import team3 from "../images/team-3.png";
-
-import partner1 from "../images/partner-1.png";
-import partner2 from "../images/partner-2.png";
-import partner3 from "../images/partner-3.png";
-
-import starterBtn from "../images/starter-btn.svg";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Roadmap from "../components/Roadmap.astro";
+import Layout from "@layouts/Layout.astro";
+import Navbar from "@components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+import Roadmap from "@components/RoadmapSection.astro";
+import Join from "@components/JoinSection.astro";
+import Partners from "@components/PartnersSection.astro";
+import Team from "@components/TeamSection.astro";
+import MissionVision from "@components/MissionVisionSection.astro";
+import About from "@components/AboutSection.astro";
+import Hero from "@components/HeroSection.astro";
 ---
 
 <Layout title="Tiento">
 	<Navbar />
 	<main class="flex flex-col justify-center items-center overflow-hidden">
-		<section class="hero-section relative w-full min-h-[90vh]">
-			<div class="square-grid"></div>
-			<div class="mx-auto py-10 px-4 max-w-screen-xl relative">
-				<div class="flex flex-col md:flex-row justify-between relative">
-					<div
-						class="hero-left-side w-full flex flex-col items-center md:items-start"
-					>
-						<h1
-							class="text-3xl md:text-5xl max-w-lg mb-14 leading-10 md:leading-[3.5rem] font-bold"
-						>
-							Discover, Collect and Sell Exclusive Digital Art of
-							NFTs
-						</h1>
-						<h4 class="max-w-lg mb-14">
-							Explore the captivating world of NFTs, where each
-							token represents a unique digital asset, and trust
-							in verified ownership as you collect these
-							one-of-a-kind treasures.
-						</h4>
-						<div class="md:mb-14">
-							<Image src={starterBtn} alt="btn" />
-						</div>
-					</div>
-					<div
-						class="hero-right-side scale-75 md:scale-100 relative max-w-md w-full h-auto"
-					>
-						<Image
-							src={playerHero}
-							alt="hero-player"
-							loading="eager"
-						/>
-						<div class="hero-image-card">
-							<div>
-								<div class="font-bold">market value</div>
-								<div>min value</div>
-							</div>
-							<div class="text-right">
-								<div class="font-bold">$5000</div>
-								<div>$3</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section
-			id="about"
-			class="about-section mb-10 p-5 m-4 max-w-screen-2xl "
-		>
-			<div class="w-full p-4 md:p-20 flex flex-col justify-center items-center gap-y-10 bg-[#1f1f1f5d]">
-				<div
-					class="border-2 border-white border-solid w-fit px-20 py-5"
-				>
-					ABOUT
-				</div>
-				<p class="text-2xl md:mb-10">
-					Tiento is an organization that wants to build a community
-					that unites all who feel genuine passion for football
-					through the combination of  digital collectibles/currency
-					built on  blockchain technologies, and
-					formation/representation rights of professional football
-					players.
-				</p>
-				<div class="flex gap-y-5 md:gap-x-10 flex-col md:flex-row">
-					<PlayerCard
-						image={playerAbout1}
-						playerName="Alvaro Perez"
-						playerValue="$5.000"
-						playerPrice="$3"
-						playerHeight="1.75m"
-					/>
-					<PlayerCard
-						image={playerAbout2}
-						playerName="Daniel Velazquez"
-						playerValue="$5.000"
-						playerPrice="$3"
-						playerHeight="1.75m"
-					/>
-					<PlayerCard
-						image={playerAbout3}
-						playerName="Ricardo Cepeda"
-						playerValue="$5.000"
-						playerPrice="$3"
-						playerHeight="1.75m"
-					/>
-				</div>
-			</div>
-		</section>
-		<section class="mb-10 p-5 max-w-screen-2xl">
-			<div class="flex flex-col gap-y-4 md:gap-x-4 md:flex-row">
-				<div
-					id="mission"
-					class="mission-card md:w-1/2 p-10 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
-				>
-					<div
-						class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
-					>
-						MISSION
-					</div>
-					<p>
-						Use blockchain technology to close the existing gap
-						between professional football players and fans. This
-						will be done with activating the ability of the general
-						public to invest in the development of players and also
-						have a share in their professional representation.
-					</p>
-					<br />
-					<p>
-						The blockchain will validate financial transactions,
-						players representation rights ownership through Tiento
-						Sport Management Agency, and the investors earning
-						projections if players increase their market value.
-					</p>
-				</div>
-				<div
-					id="vision"
-					class="vision-card p-10 md:w-1/2 flex flex-col justify-center items-center bg-[#1f1f1f5d]"
-				>
-					<div
-						class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
-					>
-						VISION
-					</div>
-					<p>
-						Currently, Tiento Sports Agency has a total of 5
-						professional players. The short term vision is to be
-						able to prove the business plan using these players to
-						provide an investment opportunity using formation and
-						representation rights.
-					</p>
-					<br />
-					<p>
-						The long term vision is to expand the quantity of
-						players for representation and also hold deals with
-						formation academies in order to expand formation
-						investments of players we don&apos;t possess
-						representations rights of.
-					</p>
-				</div>
-			</div>
-		</section>
+		<Hero />
+		<About />
+		<MissionVision />
 		<Roadmap />
-		<section
-			class="team-section flex flex-col justify-center items-center mb-20 md:mb-28"
-		>
-			<div
-				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
-			>
-				TEAM
-			</div>
-			<div class="flex flex-col gap-y-10 md:flex-row md:gap-x-10">
-				<Image src={team1} alt="team-member-1" />
-				<Image src={team2} alt="team-member-2" />
-				<Image src={team3} alt="team-member-3" />
-			</div>
-		</section>
-		<section
-			class="partners-section flex flex-col justify-center items-center mb-20 md:mb-28"
-		>
-			<div
-				class="mb-10 border-2 border-white border-solid w-fit px-20 py-5"
-			>
-				PARTNERS
-			</div>
-			<div class="flex flex-col gap-y-24 md:flex-row md:gap-x-32">
-				<div class="flex flex-col justify-center items-center gap-y-8">
-					<Image src={partner1} alt="partner-1" />
-					<div>DISPLACE</div>
-				</div>
-				<div class="flex flex-col justify-center items-center gap-y-8">
-					<Image src={partner2} alt="partner-2" />
-					<div>THE LOOP</div>
-				</div>
-				<div class="flex flex-col justify-center items-center gap-y-8">
-					<Image src={partner3} alt="partner-3" />
-					<div>SOCCER VEN</div>
-				</div>
-			</div>
-		</section>
-		<section class="join">
-			<div class="join-card">
-				<h2 class="text-3xl">Start your Tiento journey</h2>
-				<div>Join our community</div>
-				<Image src={starterBtn} alt="btn" />
-			</div>
-		</section>
+		<Team />
+		<Partners />
+		<Join />
 	</main>
 	<Footer />
 </Layout>
 
-<script src="../scripts/animations.ts"></script>
+<script src="../../scripts/animations.ts"></script>
 
 <style>
 	.head-title {
 		font-family: "Fugaz One";
-	}
-
-	.hero-image-card {
-		position: absolute;
-		bottom: 25px;
-		right: 50px;
-		display: flex;
-		column-gap: 20px;
-		border: 1px solid white;
-		padding: 20px;
-		background: rgba(31, 31, 31, 0.5);
-		backdrop-filter: blur(10px);
-	}
-
-	.square-grid {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 80%;
-		opacity: 0.8;
-		background-image: linear-gradient(#505050 1px, transparent 1px),
-			linear-gradient(to right, #505050 1px, #e5e5f700 1px);
-		background-position: 50% 50%;
-		background-size: 62px 82px;
-	}
-
-	.join {
-		background-image: url("../images/stadium-background.png");
-		background-size: cover;
-		width: 100%;
-		padding-top: 200px;
-		padding-bottom: 200px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.join-card {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		border: 0.5px solid rgba(255, 255, 255, 0.5);
-		width: 100%;
-		max-width: 1024px;
-		row-gap: 2rem;
-		padding: 60px;
-		margin: 0 60px;
-		background: rgba(31, 31, 31, 0.5);
 	}
 </style>

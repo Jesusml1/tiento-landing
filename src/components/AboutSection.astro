@@ -1,0 +1,48 @@
+---
+import PlayerCard from "./PlayerCard.astro";
+
+import playerAbout1 from "@images/player-about-1.png";
+import playerAbout2 from "@images/player-about-2.png";
+import playerAbout3 from "@images/player-about-3.png";
+
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="about" class="about-section mb-10 p-5 m-4 max-w-screen-2xl">
+    <div
+        class="w-full p-4 md:p-20 flex flex-col justify-center items-center gap-y-10 bg-[#1f1f1f5d]"
+    >
+        <div class="border-2 border-white border-solid w-fit px-20 py-5">
+            {t("about.title")}
+        </div>
+        <p class="text-2xl md:mb-10">
+            {t("about.body")}
+        </p>
+        <div class="flex gap-y-5 md:gap-x-10 flex-col md:flex-row">
+            <PlayerCard
+                image={playerAbout1}
+                playerName="Alvaro Perez"
+                playerValue="$5.000"
+                playerPrice="$3"
+                playerHeight="1.75m"
+            />
+            <PlayerCard
+                image={playerAbout2}
+                playerName="Daniel Velazquez"
+                playerValue="$5.000"
+                playerPrice="$3"
+                playerHeight="1.75m"
+            />
+            <PlayerCard
+                image={playerAbout3}
+                playerName="Ricardo Cepeda"
+                playerValue="$5.000"
+                playerPrice="$3"
+                playerHeight="1.75m"
+            />
+        </div>
+    </div>
+</section>
