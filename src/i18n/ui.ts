@@ -74,7 +74,7 @@ export const ui = {
         'hero.title': 'Descubra, coleccione y venda arte digital exclusivo de NFT',
         'hero.subtitle': 'Explore el cautivador mundo de las NFT, donde cada ficha representa un activo digital único, y confíe en la propiedad verificada mientras colecciona estos tesoros únicos.',
 
-        'about.title': 'ABOUT',
+        'about.title': 'SOBRE NOSOTROS',
         'about.body': 'Tiento es una organización que quiere construir una comunidad que una a todos los que sienten auténtica pasión por el fútbol a través de la combinación de coleccionables/moneda digitales construidos sobre tecnologías blockchain, y derechos de formación/representación de futbolistas profesionales.',
 
         'mission.title': 'MISIÓN',
