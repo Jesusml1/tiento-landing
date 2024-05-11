@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import tientoLogo from "@images/tiento-logo.svg";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -18,7 +19,7 @@ const t = useTranslations(lang);
                 height={75}
                 width={75}
                 alt="logo"
-                loading='eager'
+                loading="eager"
             />
             <Image
                 class="hidden md:block"
@@ -26,7 +27,7 @@ const t = useTranslations(lang);
                 height={100}
                 width={100}
                 alt="logo"
-                loading='eager'
+                loading="eager"
             />
             <div class="head-title">TIENTO</div>
         </div>
@@ -46,8 +47,11 @@ const t = useTranslations(lang);
                 </li>
             </ul>
         </div>
-        <div>
-            <a href="/login" class="hover:underline"> {t("shared.getStarted")} </a>
+        <div class="flex gap-x-2 md:gap-x-8">
+            <a href="/login" class="hover:underline">
+                {t("shared.getStarted")}
+            </a>
+            <LanguagePicker />
         </div>
     </div>
 </header>
