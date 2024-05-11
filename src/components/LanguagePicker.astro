@@ -1,0 +1,22 @@
+---
+import { getLangFromUrl } from "src/i18n/utils";
+import { languages } from "../i18n/ui";
+
+const currentLang = getLangFromUrl(Astro.url);
+---
+
+<ul class="hidden md:block">
+    {
+        Object.entries(languages).map(([lang, label]) => {
+            if (currentLang === lang) {
+                return;
+            }
+
+            return (
+                <li>
+                    <a href={`/${lang}/`}>{label}</a>
+                </li>
+            );
+        })
+    }
+</ul>

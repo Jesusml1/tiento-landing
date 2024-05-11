@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import playerHero from "@images/player-hero.png";
+import starterBtn from "@images/starter-btn.svg";
+
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="hero-section relative w-full min-h-[90vh]">
+    <div class="square-grid"></div>
+    <div class="mx-auto py-10 px-4 max-w-screen-xl relative">
+        <div class="flex flex-col md:flex-row justify-between relative">
+            <div
+                class="hero-left-side w-full flex flex-col items-center md:items-start"
+            >
+                <h1
+                    class="text-3xl md:text-5xl max-w-lg mb-14 leading-10 md:leading-[3.5rem] font-bold"
+                >
+                    {t("hero.title")}
+                </h1>
+                <h4 class="max-w-lg mb-14">
+                    {t("hero.subtitle")}
+                </h4>
+                <div class="md:mb-14">
+                    <Image src={starterBtn} alt="btn" loading="eager" />
+                </div>
+            </div>
+            <div
+                class="hero-right-side scale-75 md:scale-100 relative max-w-md w-full h-auto"
+            >
+                <Image src={playerHero} alt="hero-player" loading="eager" />
+                <div class="hero-image-card">
+                    <div>
+                        <div class="font-bold">market value</div>
+                        <div>min value</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold">$5000</div>
+                        <div>$3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero-image-card {
+        position: absolute;
+        bottom: 25px;
+        right: 50px;
+        display: flex;
+        column-gap: 20px;
+        border: 1px solid white;
+        padding: 20px;
+        background: rgba(31, 31, 31, 0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    .square-grid {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 80%;
+        opacity: 0.8;
+        background-image: linear-gradient(#505050 1px, transparent 1px),
+            linear-gradient(to right, #505050 1px, #e5e5f700 1px);
+        background-position: 50% 50%;
+        background-size: 62px 82px;
+    }
+</style>
