@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import starterBtn from "@images/starter-btn.svg";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="join">
+    <div class="join-card">
+        <h2 class="text-3xl">{t("join.title")}</h2>
+        <div>{t("join.subtitle")}</div>
+        <Image src={starterBtn} alt="btn" loading="lazy" />
+    </div>
+</section>
+
+<style>
+    .join {
+        background-image: url("../images/stadium-background.png");
+        background-size: cover;
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .join-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 0.5px solid rgba(255, 255, 255, 0.5);
+        width: 100%;
+        max-width: 1024px;
+        row-gap: 2rem;
+        padding: 60px;
+        margin: 0 60px;
+        background: rgba(31, 31, 31, 0.5);
+    }
+</style>

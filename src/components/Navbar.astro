@@ -1,6 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import tientoLogo from "../images/tiento-logo.svg";
+import tientoLogo from "@images/tiento-logo.svg";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import LanguagePicker from "./LanguagePicker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -8,28 +13,45 @@ import tientoLogo from "../images/tiento-logo.svg";
 >
     <div class="flex w-full justify-between items-center">
         <div class="flex gap-4 justify-center items-center">
-            <Image class="md:hidden" src={tientoLogo} height={75} width={75} alt="logo" />
-            <Image class="hidden md:block" src={tientoLogo} height={100} width={100} alt="logo" />
+            <Image
+                class="md:hidden"
+                src={tientoLogo}
+                height={75}
+                width={75}
+                alt="logo"
+                loading="eager"
+            />
+            <Image
+                class="hidden md:block"
+                src={tientoLogo}
+                height={100}
+                width={100}
+                alt="logo"
+                loading="eager"
+            />
             <div class="head-title">TIENTO</div>
         </div>
         <div class="hidden md:block">
-            <ul class="flex gap-6">
+            <ul class="flex md:gap-x-6 lg:gap-x-10">
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about">{t("nav.about")}</a>
                 </li>
                 <li>
-                    <a href="#mission">Mission</a>
+                    <a href="#mission">{t("nav.mission")}</a>
                 </li>
                 <li>
-                    <a href="#vision">Vision</a>
+                    <a href="#vision">{t("nav.vision")}</a>
                 </li>
                 <li>
-                    <a href="#roadmap">Roadmap</a>
+                    <a href="#roadmap">{t("nav.roadmap")}</a>
                 </li>
             </ul>
         </div>
-        <div>
-            <a href="/login" class="hover:underline"> GET STARTED </a>
+        <div class="flex gap-x-2 md:gap-x-8">
+            <a href="/login" class="hover:underline">
+                {t("shared.getStarted")}
+            </a>
+            <LanguagePicker />
         </div>
     </div>
 </header>
