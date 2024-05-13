@@ -1,0 +1,206 @@
+---
+import { Image } from "astro:assets";
+import roadmap1 from "@images/roadmap-1.svg";
+import roadmap2 from "@images/roadmap-2.svg";
+import roadmap3 from "@images/roadmap-3.svg";
+import roadmap4 from "@images/roadmap-4.svg";
+import roadmap5 from "@images/roadmap-5.svg";
+import roadmap6 from "@images/roadmap-6.svg";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section id="roadmap" class="roadmap-section mb-10 p-5 m-4 max-w-screen-2xl">
+    <div
+        class="w-full px-4 py-10  md:p-20 flex flex-col justify-center items-center gap-y-10 bg-gray-200"
+    >
+        <div
+            class="mb-10 border-2 border-[#1f1f1f5d] text-[#1f1f1f] border-solid w-fit px-20 py-5"
+        >
+            {t("roadmap.title")}
+        </div>
+        <!-- desktop -->
+        <div class="hidden lg:flex flex-col gap-y-24 text-black">
+            <div class="roadmap-1 flex justify-around items-center gap-x-5">
+                <Image src={roadmap1} alt="roadmap-1" loading="eager" />
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h3
+                    class="mb-2 text-lg border-black border-solid border-[1px] p-4 rounded-full h-32 w-32 flex justify-center items-center"
+                >
+                    {t("roadmap.phase1")}
+                </h3>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h2 class="max-w-sm text-2xl text-center">
+                    {t("roadmap.phase1.name")}
+                </h2>
+            </div>
+            <div class="roadmap-2 flex justify-around items-center gap-x-5">
+                <h2 class="max-w-sm text-2xl text-center">
+                    {t("roadmap.phase2.name")}
+                </h2>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h3
+                    class="mb-2 text-lg border-black border-solid border-[1px] p-4 rounded-full h-32 w-32 flex justify-center items-center"
+                >
+                    {t("roadmap.phase2")}
+                </h3>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <Image src={roadmap2} alt="roadmap-2" loading="eager" />
+            </div>
+            <div class="roadmap-3 flex justify-around items-center gap-x-5">
+                <Image src={roadmap3} alt="roadmap-3" loading="eager" />
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h3
+                    class="mb-2 text-lg border-black border-solid border-[1px] p-4 rounded-full h-32 w-32 flex justify-center items-center"
+                >
+                    {t("roadmap.phase3")}
+                </h3>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h2 class="max-w-sm text-2xl text-center">
+                    {t("roadmap.phase3.name")}
+                </h2>
+            </div>
+            <div class="roadmap-4 flex justify-around items-center gap-x-5">
+                <h2 class="max-w-sm text-2xl text-center">
+                    {t("roadmap.phase4.name")}
+                </h2>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h3
+                    class="mb-2 text-lg border-black border-solid border-[1px] p-4 rounded-full h-32 w-32 flex justify-center items-center"
+                >
+                    {t("roadmap.phase4")}
+                </h3>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <Image src={roadmap4} alt="roadmap-4" loading="eager" />
+            </div>
+            <div class="roadmap-5 flex justify-around items-center gap-x-5">
+                <Image src={roadmap5} alt="roadmap-5" loading="eager" />
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h3
+                    class="mb-2 text-lg border-black border-solid border-[1px] p-4 rounded-full h-32 w-32 flex justify-center items-center"
+                >
+                    {t("roadmap.phase5")}
+                </h3>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h2 class="max-w-sm text-2xl text-center">
+                    {t("roadmap.phase5.name")}
+                </h2>
+            </div>
+            <div class="roadmap-6 flex justify-around items-center gap-x-5">
+                <h2 class="max-w-sm text-2xl text-center">
+                    {t("roadmap.phase6.name")}
+                </h2>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <h3
+                    class="mb-2 text-lg border-black border-solid border-[1px] p-4 rounded-full h-32 w-32 flex justify-center items-center"
+                >
+                    {t("roadmap.phase6")}
+                </h3>
+                <div class="border-b-[1px] border-solid border-black w-14">
+                </div>
+                <Image src={roadmap6} alt="roadmap-6" loading="eager" />
+            </div>
+        </div>
+        <!-- mobile -->
+        <div
+            class="flex lg:hidden flex-col justify-center items-center gap-y-14 text-black"
+        >
+            <div
+                class="roadmap-1 flex flex-col justify-around items-center gap-y-5"
+            >
+                <h3
+                    class="mb-2 text-md border-black border-solid border-[1px] p-4 rounded-full h-28 w-28 flex justify-center items-center"
+                >
+                    {t("roadmap.phase1")}
+                </h3>
+                <h2 class="max-w-sm text-lg px-5 lg:px-0 text-center">
+                    {t("roadmap.phase1.name")}
+                </h2>
+                <Image src={roadmap1} alt="roadmap-1" loading="eager" />
+            </div>
+            <div class="border-l-[1px] border-solid border-black h-16"></div>
+            <div
+                class="roadmap-2 flex flex-col justify-around items-center gap-y-5"
+            >
+                <h3
+                    class="mb-2 text-md border-black border-solid border-[1px] p-4 rounded-full h-28 w-28 flex justify-center items-center"
+                >
+                    {t("roadmap.phase2")}
+                </h3>
+                <h2 class="max-w-sm text-lg px-5 lg:px-0 text-center">
+                    {t("roadmap.phase2.name")}
+                </h2>
+                <Image src={roadmap2} alt="roadmap-2" loading="eager" />
+            </div>
+            <div class="border-l-[1px] border-solid border-black h-16"></div>
+            <div
+                class="roadmap-3 flex flex-col justify-around items-center gap-y-5"
+            >
+                <h3
+                    class="mb-2 text-md border-black border-solid border-[1px] p-4 rounded-full h-28 w-28 flex justify-center items-center"
+                >
+                    {t("roadmap.phase3")}
+                </h3>
+                <h2 class="max-w-sm text-lg px-5 lg:px-0 text-center">
+                    {t("roadmap.phase1.name")}
+                </h2>
+                <Image src={roadmap3} alt="roadmap-3" loading="eager" />
+            </div>
+            <div class="border-l-[1px] border-solid border-black h-16"></div>
+            <div
+                class="roadmap-4 flex flex-col justify-around items-center gap-y-5"
+            >
+                <h3
+                    class="mb-2 text-md border-black border-solid border-[1px] p-4 rounded-full h-28 w-28 flex justify-center items-center"
+                >
+                    {t("roadmap.phase4")}
+                </h3>
+                <h2 class="max-w-sm text-lg px-5 lg:px-0 text-center">
+                    {t("roadmap.phase4.name")}
+                </h2>
+                <Image src={roadmap4} alt="roadmap-4" loading="eager" />
+            </div>
+            <div class="border-l-[1px] border-solid border-black h-16"></div>
+            <div
+                class="roadmap-5 flex flex-col justify-around items-center gap-y-5"
+            >
+                <h3
+                    class="mb-2 text-md border-black border-solid border-[1px] p-4 rounded-full h-28 w-28 flex justify-center items-center"
+                >
+                    {t("roadmap.phase5")}
+                </h3>
+                <h2 class="max-w-sm text-lg px-5 lg:px-0 text-center">
+                    {t("roadmap.phase5.name")}
+                </h2>
+                <Image src={roadmap5} alt="roadmap-5" loading="eager" />
+            </div>
+            <div class="border-l-[1px] border-solid border-black h-16"></div>
+            <div
+                class="roadmap-6 flex flex-col justify-around items-center gap-y-5"
+            >
+                <h3
+                    class="mb-2 text-md border-black border-solid border-[1px] p-4 rounded-full h-28 w-28 flex justify-center items-center"
+                >
+                    {t("roadmap.phase6")}
+                </h3>
+                <h2 class="max-w-sm text-lg px-5 lg:px-0 text-center">
+                    {t("roadmap.phase6.name")}
+                </h2>
+                <Image src={roadmap6} alt="roadmap-6" loading="eager" />
+            </div>
+        </div>
+    </div>
+</section>

@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
 
     gsap.from(".roadmap-1", {
         scrollTrigger: ".roadmap-1",
-        x: 200,
+        x: -200,
         opacity: 0,
         duration: 0.5,
     });
@@ -64,7 +64,7 @@ window.addEventListener("load", () => {
 
     gsap.from(".roadmap-3", {
         scrollTrigger: ".roadmap-3",
-        x: 200,
+        x: -200,
         opacity: 0,
         duration: 0.5,
     });
@@ -78,7 +78,7 @@ window.addEventListener("load", () => {
 
     gsap.from(".roadmap-5", {
         scrollTrigger: ".roadmap-5",
-        x: 200,
+        x: -200,
         opacity: 0,
         duration: 0.5,
     });
