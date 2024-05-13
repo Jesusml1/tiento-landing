@@ -11,7 +11,9 @@ const t = useTranslations(lang);
     <div class="join-card">
         <h2 class="text-3xl">{t("join.title")}</h2>
         <div>{t("join.subtitle")}</div>
-        <Image src={starterBtn} alt="btn" loading="lazy" />
+        <a href="/login">
+            <Image src={starterBtn} alt="btn" loading="lazy" />
+        </a>
     </div>
 </section>
 
