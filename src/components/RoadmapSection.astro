@@ -12,9 +12,9 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="roadmap" class="roadmap-section mb-10 p-5 m-4 max-w-screen-2xl">
+<section id="roadmap" class="roadmap-section mb-20 p-5 m-4 max-w-screen-2xl">
     <div
-        class="w-full px-4 py-10  md:p-20 flex flex-col justify-center items-center gap-y-10 bg-gray-200"
+        class="w-full px-4 py-10 md:p-20 flex flex-col justify-center items-center gap-y-10 bg-gray-200"
     >
         <div
             class="mb-10 border-[1px] border-[#1f1f1f] text-[#1f1f1f] border-solid w-fit px-20 py-5"
@@ -23,8 +23,12 @@ const t = useTranslations(lang);
         </div>
         <!-- desktop -->
         <div class="hidden lg:flex flex-col gap-y-24 text-black">
-            <div class="roadmap-1 group flex justify-around items-center gap-x-5">
-                <Image src={roadmap1} alt="roadmap-1" loading="eager" />
+            <div
+                class="roadmap-1 group flex justify-between items-center gap-x-5"
+            >
+                <div class="lg:w-52">
+                    <Image src={roadmap1} alt="roadmap-1" loading="eager" />
+                </div>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
                 <h3
@@ -34,12 +38,14 @@ const t = useTranslations(lang);
                 </h3>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
-                <h2 class="max-w-sm text-2xl text-center">
+                <h2 class="max-w-sm lg:w-52 text-2xl text-center">
                     {t("roadmap.phase1.name")}
                 </h2>
             </div>
-            <div class="roadmap-2 group flex justify-around items-center gap-x-5">
-                <h2 class="max-w-sm text-2xl text-center">
+            <div
+                class="roadmap-2 group flex justify-between items-center gap-x-5"
+            >
+                <h2 class="max-w-sm lg:w-52 text-2xl text-center">
                     {t("roadmap.phase2.name")}
                 </h2>
                 <div class="border-b-[1px] border-solid border-black w-14">
@@ -51,10 +57,16 @@ const t = useTranslations(lang);
                 </h3>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
-                <Image src={roadmap2} alt="roadmap-2" loading="eager" />
+                <div class="lg:w-52">
+                    <Image src={roadmap2} alt="roadmap-2" loading="eager" />
+                </div>
             </div>
-            <div class="roadmap-3 group flex justify-around items-center gap-x-5">
-                <Image src={roadmap3} alt="roadmap-3" loading="eager" />
+            <div
+                class="roadmap-3 group flex justify-between items-center gap-x-5"
+            >
+                <div class="lg:w-52">
+                    <Image src={roadmap3} alt="roadmap-3" loading="eager" />
+                </div>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
                 <h3
@@ -64,12 +76,14 @@ const t = useTranslations(lang);
                 </h3>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
-                <h2 class="max-w-sm text-2xl text-center">
+                <h2 class="max-w-sm lg:w-52 text-2xl text-center">
                     {t("roadmap.phase3.name")}
                 </h2>
             </div>
-            <div class="roadmap-4 group flex justify-around items-center gap-x-5">
-                <h2 class="max-w-sm text-2xl text-center">
+            <div
+                class="roadmap-4 group flex justify-between items-center gap-x-5"
+            >
+                <h2 class="max-w-sm lg:w-52 text-2xl text-center">
                     {t("roadmap.phase4.name")}
                 </h2>
                 <div class="border-b-[1px] border-solid border-black w-14">
@@ -81,10 +95,16 @@ const t = useTranslations(lang);
                 </h3>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
-                <Image src={roadmap4} alt="roadmap-4" loading="eager" />
+                <div class="lg:w-52">
+                    <Image src={roadmap4} alt="roadmap-4" loading="eager" />
+                </div>
             </div>
-            <div class="roadmap-5 group flex justify-around items-center gap-x-5">
-                <Image src={roadmap5} alt="roadmap-5" loading="eager" />
+            <div
+                class="roadmap-5 group flex justify-between items-center gap-x-5"
+            >
+                <div class="lg:w-52">
+                    <Image src={roadmap5} alt="roadmap-5" loading="eager" />
+                </div>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
                 <h3
@@ -94,12 +114,14 @@ const t = useTranslations(lang);
                 </h3>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
-                <h2 class="max-w-sm text-2xl text-center">
+                <h2 class="max-w-sm lg:w-52 text-2xl text-center">
                     {t("roadmap.phase5.name")}
                 </h2>
             </div>
-            <div class="roadmap-6 group flex justify-around items-center gap-x-5">
-                <h2 class="max-w-sm text-2xl text-center">
+            <div
+                class="roadmap-6 group flex justify-between items-center gap-x-5"
+            >
+                <h2 class="max-w-sm lg:w-52 text-2xl text-center">
                     {t("roadmap.phase6.name")}
                 </h2>
                 <div class="border-b-[1px] border-solid border-black w-14">
@@ -111,7 +133,9 @@ const t = useTranslations(lang);
                 </h3>
                 <div class="border-b-[1px] border-solid border-black w-14">
                 </div>
-                <Image src={roadmap6} alt="roadmap-6" loading="eager" />
+                <div class="lg:w-52">
+                    <Image src={roadmap6} alt="roadmap-6" loading="eager" />
+                </div>
             </div>
         </div>
         <!-- mobile -->
