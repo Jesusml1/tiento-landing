@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import playerHero from "@images/player-hero.png";
-import starterBtn from "@images/starter-btn.svg";
-
 import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import starterBtn from "@images/starter-btn.svg";
+import starterHoverBtn from "@images/starter-hover-btn.svg";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -21,17 +21,29 @@ const t = useTranslations(lang);
                 >
                     {t("hero.title")}
                 </h1>
-                <h4 class="max-w-lg mb-14">
+                <h4 class="max-w-lg lg:text-lg mb-14">
                     {t("hero.subtitle")}
                 </h4>
                 <div class="md:mb-14">
-                    <a href="/login">
-                        <Image src={starterBtn} alt="btn" loading="eager" />
+                    <a href="/login" id="get-started-btn">
+                        <Image
+                            src={starterBtn}
+                            id="started-btn-normal"
+                            alt="btn"
+                            loading="eager"
+                        />
+                        <Image
+                            src={starterHoverBtn}
+                            id="started-btn-hover"
+                            class="hidden"
+                            alt="btn"
+                            loading="eager"
+                        />
                     </a>
                 </div>
             </div>
             <div
-                class="hero-right-side scale-75 md:scale-100 relative max-w-md w-full h-auto"
+                class="hero-right-side scale-75 md:scale-100 lg:scale-110 relative max-w-md w-full h-auto lg:max-h-[60vh]"
             >
                 <Image src={playerHero} alt="hero-player" loading="eager" />
                 <div class="hero-image-card">
@@ -48,6 +60,20 @@ const t = useTranslations(lang);
         </div>
     </div>
 </section>
+
+<script>
+    const button = document.querySelector("#get-started-btn");
+    const btn = document.querySelector("#started-btn-normal");
+    const hoverBtn = document.querySelector("#started-btn-hover");
+    button?.addEventListener("mouseenter", () => {
+        btn?.classList.add("hidden");
+        hoverBtn?.classList.remove("hidden");
+    });
+    button?.addEventListener("mouseleave", () => {
+        btn?.classList.remove("hidden");
+        hoverBtn?.classList.add("hidden");
+    });
+</script>
 
 <style>
     .hero-image-card {

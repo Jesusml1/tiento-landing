@@ -1,7 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 import { Image } from "astro:assets";
 import starterBtn from "@images/starter-btn.svg";
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import starterHoverBtn from "@images/starter-hover-btn.svg";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -11,11 +12,37 @@ const t = useTranslations(lang);
     <div class="join-card">
         <h2 class="text-3xl">{t("join.title")}</h2>
         <div>{t("join.subtitle")}</div>
-        <a href="/login">
-            <Image src={starterBtn} alt="btn" loading="lazy" />
+        <a href="/login" id="get-started-btn-1">
+            <Image
+                src={starterBtn}
+                id="started-btn-normal-1"
+                alt="btn"
+                loading="eager"
+            />
+            <Image
+                src={starterHoverBtn}
+                id="started-btn-hover-1"
+                class="hidden"
+                alt="btn"
+                loading="eager"
+            />
         </a>
     </div>
 </section>
+
+<script>
+    const button = document.querySelector("#get-started-btn-1");
+    const btn = document.querySelector("#started-btn-normal-1");
+    const hoverBtn = document.querySelector("#started-btn-hover-1");
+    button?.addEventListener("mouseenter", () => {
+        btn?.classList.add("hidden");
+        hoverBtn?.classList.remove("hidden");
+    });
+    button?.addEventListener("mouseleave", () => {
+        btn?.classList.remove("hidden");
+        hoverBtn?.classList.add("hidden");
+    });
+</script>
 
 <style>
     .join {
