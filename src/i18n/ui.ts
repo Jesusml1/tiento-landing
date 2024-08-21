@@ -14,11 +14,14 @@ export const ui = {
         'nav.mission': 'Mission',
         'nav.vision': 'Vision',
         'nav.roadmap': 'Roadmap',
+        'nav.tsm': 'Sport Management',
+        'nav.project': 'The project',
+        'nav.community': 'Community',
 
         'hero.title': 'Discover, Collect and Sell Exclusive Digital Art of NFTs',
         'hero.subtitle': 'Explore the captivating world of NFTs, where each token represents a unique digital asset, and trust in verified ownership as you collect these one-of-a-kind treasures.',
 
-        'about.title': 'ABOUT',
+        'about.title': 'TIENTO SPORT MANAGEMENT',
         'about.body': 'Tiento is an organization that wants to build a community that unites all who feel genuine passion for football through the combination of  digital collectibles/currency built on  blockchain technologies, and formation/representation rights of professional football players.',
 
         'mission.title': 'MISSION',
@@ -65,16 +68,19 @@ export const ui = {
     es: {
         'shared.getStarted': 'EMPIEZA YA',
 
-        'nav.home': 'Home',
+        'nav.home': 'Inicio',
         'nav.about': 'Sobre Nosotros',
         'nav.mission': 'Misión',
         'nav.vision': 'Visión',
         'nav.roadmap': 'Hoja de ruta',
+        'nav.tsm': 'Sport Management',
+        'nav.project': 'El proyecto',
+        'nav.community': 'Comunidad',
 
         'hero.title': 'Descubra, coleccione y venda arte digital exclusivo de NFT',
         'hero.subtitle': 'Explore el cautivador mundo de las NFT, donde cada ficha representa un activo digital único, y confíe en la propiedad verificada mientras colecciona estos tesoros únicos.',
 
-        'about.title': 'SOBRE NOSOTROS',
+        'about.title': 'TIENTO SPORT MANAGEMENT',
         'about.body': 'Tiento es una organización que quiere construir una comunidad que una a todos los que sienten auténtica pasión por el fútbol a través de la combinación de coleccionables/moneda digitales construidos sobre tecnologías blockchain, y derechos de formación/representación de futbolistas profesionales.',
 
         'mission.title': 'MISIÓN',
