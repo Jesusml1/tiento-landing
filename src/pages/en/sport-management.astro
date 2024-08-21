@@ -2,13 +2,15 @@
 import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/Navbar.astro";
 import Footer from "@components/Footer.astro";
-import Hero from "@components/HeroSection.astro";
+import MissionVision from "@components/MissionVisionSection.astro";
+import AboutSection from "@components/AboutSection.astro";
 ---
 
 <Layout title="Tiento">
 	<Navbar />
 	<main class="flex flex-col justify-center items-center overflow-hidden">
-		<Hero />
+		<AboutSection />
+		<MissionVision />
 	</main>
 	<Footer />
 </Layout>

@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import tientoLogo from "@images/tiento-logo.svg";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import LanguagePicker from "./LanguagePicker.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,7 +13,7 @@ const t = useTranslations(lang);
     class="mx-auto w-full mb-10 py-10 px-4 max-w-screen-xl flex justify-center items-center"
 >
     <div class="flex w-full justify-between items-center">
-        <div class="flex gap-4 justify-center items-center">
+        <div class="flex gap-2 justify-center items-center">
             <Image
                 class="md:hidden"
                 src={tientoLogo}
@@ -34,16 +35,19 @@ const t = useTranslations(lang);
         <div class="hidden md:block">
             <ul class="flex md:gap-x-6 lg:gap-x-10">
                 <li>
-                    <a href="#about">{t("nav.about")}</a>
+                    <a href={getRelativeLocaleUrl(lang)}>{t("nav.home")}</a>
                 </li>
                 <li>
-                    <a href="#mission">{t("nav.mission")}</a>
+                    <a href={getRelativeLocaleUrl(lang, 'sport-management')}>{t("nav.tsm")}</a>
                 </li>
                 <li>
-                    <a href="#vision">{t("nav.vision")}</a>
+                    <a href={getRelativeLocaleUrl(lang, 'project')}>{t("nav.project")}</a>
                 </li>
                 <li>
-                    <a href="#roadmap">{t("nav.roadmap")}</a>
+                    <a href={getRelativeLocaleUrl(lang, 'community')}>{t("nav.community")}</a>
+                </li>
+                <li>
+                    <a href={getRelativeLocaleUrl(lang, 'about')}>{t("nav.about")}</a>
                 </li>
             </ul>
         </div>
